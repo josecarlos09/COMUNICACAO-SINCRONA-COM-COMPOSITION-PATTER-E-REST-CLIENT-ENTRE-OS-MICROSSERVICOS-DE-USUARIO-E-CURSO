@@ -1,0 +1,66 @@
+# Configuração do servidor
+server:
+  port: 8087  # Define a porta em que o servidor será iniciado. A aplicação será acessível via http://localhost:8087
+  servlet:
+    context-path: '/plataforma-ead-usuario/'  # Define o contexto base para os endpoints da aplicação. No exemplo, todos os endpoints começarão com /usuario/.
+
+# Configuração do Springdoc para a geração da documentação da API
+springdoc:
+  api-docs:
+    path: /v3/api-docs  # Especifica o caminho onde a documentação da API em formato JSON será exposta. O caminho completo será http://localhost:8087/usuario/v3/api-docs.
+
+  swagger-ui:
+    path: /swagger-ui/index.html  # Define o caminho para acessar a interface do Swagger UI. O Swagger UI estará acessível em http://localhost:8087/usuario/swagger-ui/index.html.
+
+# Configuração de conexão com a base de dados PostgreSQL
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/plataforma-ead-usuario  # URL para se conectar ao banco de dados PostgreSQL. Aqui, está configurado para acessar o banco "usuario" na porta 5433.
+    username: postgres  # Nome de usuário para conexão com o banco de dados.
+    password: Postgre  # Senha para a conexão com o banco de dados.
+    driver-class-name: org.postgresql.Driver  # Driver JDBC para PostgreSQL.
+    hikari:
+      maximum-pool-size: 10  # Define o número máximo de conexões no pool de conexões Hikari. Ajuste conforme necessário para a carga de trabalho.
+
+  jpa: # Configurações relacionadas ao JPA (Java Persistence API)
+    open-in-view: false  # Desativa a funcionalidade de 'open-in-view', o que ajuda a evitar consultas desnecessárias ao banco de dados após o renderização da view.
+    hibernate:  # Configurações do Hibernate para interagir com o banco de dados
+      ddl-auto: update  # Configura o Hibernate para atualizar o esquema do banco de dados conforme a estrutura das entidades.
+      dialect: org.hibernate.dialect.PostgreSQLDialect  # Dialeto do Hibernate para PostgreSQL. Esse dialeto ajusta o comportamento do Hibernate para a sintaxe do PostgreSQL.
+      jdbc:
+        lob.non-contextual-creation: true  # Impede a criação de logs de erro do JDBC para grandes objetos binários (LOB).
+
+    properties:  # Configurações adicionais para o Hibernate
+      hibernate:
+        show_sql: true  # Exibe as instruções SQL geradas pelo Hibernate no console. Útil para depuração.
+        format_sql: true  # Formata os comandos SQL para facilitar a leitura no console.
+
+  # Configuração do comportamento de logs
+  output:
+    ansi:
+      enabled: Always  # Ativa a exibição de logs com cores no console.
+
+    SQL: debug  # Exibe as instruções SQL geradas pelo Hibernate com mais detalhes. Útil para depuração da comunicação com o banco de dados.
+    type:
+      descriptor:
+        sql:
+          BasicBinder: trace  # Exibe os parâmetros que estão sendo passados para os comandos SQL no log, o que é útil para análise e depuração.
+
+#URL base
+plataforma_ead:
+  api:
+    url:
+      curso: 'http://localhost:8082/plataforma-ead-formacao' # URL de curso
+
+# Configuração de níveis de log
+logging:
+  level:
+    plataforma_ead: TRACE  # Define o nível de log como TRACE para a aplicação "plataforma_ead", exibindo informações detalhadas.
+    root: INFO  # Nível de log padrão para a aplicação. INFO exibe informações gerais.
+    org.springframework.web: DEBUG  # Configura o nível de log para o pacote Spring Web como DEBUG. Exibe informações detalhadas sobre as requisições HTTP.
+    org.hibernate: INFO  # Define o nível de log do Hibernate como INFO, exibe informações gerais sobre o funcionamento do Hibernate.
+
+# Configuração de autorização via JWT
+autorizacao:
+  jwtSecret: KtMyJNrMuVqahZMIQRKTaSagmZz4MjwXy+3D0awL1XCe0MMhXawXgTIteLVqfXVyjCDJk4HgJf0189g8Steq509KPrBn2FlGc+6plqti0d4=
+  jwtExpirationMs: 14400000  # Tempo de expiração do token JWT em milissegundos (4 horas)
