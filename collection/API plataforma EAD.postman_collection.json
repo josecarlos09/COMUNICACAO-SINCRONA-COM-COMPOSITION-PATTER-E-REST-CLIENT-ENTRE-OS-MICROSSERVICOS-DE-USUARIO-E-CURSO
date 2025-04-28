@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "b0c7c452-69d8-4e56-89f4-cae3631100cd",
+		"name": "API plataforma EAD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39714074"
+	},
+	"item": [
+		{
+			"name": "USUARIO",
+			"item": [
+				{
+					"name": "GET ALL USUARIOS",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GAET ONE USUARIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/1a1273f7-983f-4d8c-bedc-9a393b867e56",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"1a1273f7-983f-4d8c-bedc-9a393b867e56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USUARIO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/4670d15f-2b89-4788-97da-d855ee01c4bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"4670d15f-2b89-4788-97da-d855ee01c4bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"nome\": \"Marcelo\",\r\n\"email\": \"Marcelo@gmail.com\",\r\n\"senha\": \"12\",\r\n\"senhaAntiga\":\"56\",\r\n\"nomeCompleto\":\"Marcelo\",\r\n\"telefone\":\"(81)9 7314-0364\",\r\n\"imagemUrl\":\"123455677\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/autenticacao/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"autenticacao",
+								"registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT USUARIO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCompleto\":\"Marcelo\",\r\n    \"telefone\":\"8906296\",\r\n    \"nome\":\"João\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/44ac30f9-4aa1-468c-9ed9-31e8cb92b1dd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"44ac30f9-4aa1-468c-9ed9-31e8cb92b1dd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT IMAGEM USUARIO",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"imagemUrl\":\"1234567899969967\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/3ca7bef8-15e2-4695-9803-c88e11912e03/imagem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"3ca7bef8-15e2-4695-9803-c88e11912e03",
+								"imagem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT STATUS",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"statusUsuario\":\"BLOQUEADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/3ca7bef8-15e2-4695-9803-c88e11912e03/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"3ca7bef8-15e2-4695-9803-c88e11912e03",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT SENHA",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senhaAntiga\":\"@Ana12345\",\r\n    \"senha\":\"@Ana123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/3ca7bef8-15e2-4695-9803-c88e11912e03/senha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"3ca7bef8-15e2-4695-9803-c88e11912e03",
+								"senha"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CURSO",
+			"item": [
+				{
+					"name": "POST CURSOS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Desenvolvimento Back-End\",\r\n    \"descricao\": \"O curso é voltado para a pratica do mercado\",\r\n    \"cursoEstatus\":\"CURSANDO\",\r\n    \"duracaoCurso\":\"2 anos de duração\",\r\n    \"cursoNivel\":\"AVANCADO\",\r\n    \"instrutor\":\"ed15500b-aa72-4ea5-9d57-1e7c6c8310c3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-curso/cursos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-curso",
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ON CURSOS",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL CURSOS",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CURSOS",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CURSOS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Deso Back-End\",\r\n    \"descricao\": \"O curso é voltado para a pratica do mercado\",\r\n    \"cursoEstatus\":\"CURSANDO\",\r\n    \"duracaoCurso\":\"2 anos de duração\",\r\n    \"cursoNivel\":\"AVANCADO\",\r\n    \"instrutor\":\"ed15500b-aa72-4ea5-9d57-1e7c6c8310c3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-curso/cursos/1f14f2dc-6bf4-42a3-a4bd-bf4671215d93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-curso",
+								"cursos",
+								"1f14f2dc-6bf4-42a3-a4bd-bf4671215d93"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MODULO",
+			"item": [
+				{
+					"name": "POST MODULOS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-curso/cursos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-curso",
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL MODULOS",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET ON MODULO",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MODULO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-formacao/curso/1f14f2dc-6bf4-42a3-a4bd-bf4671215d93/modulo/e491e1d8-d4bb-4512-bff7-93918ba0a7fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-formacao",
+								"curso",
+								"1f14f2dc-6bf4-42a3-a4bd-bf4671215d93",
+								"modulo",
+								"e491e1d8-d4bb-4512-bff7-93918ba0a7fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MODULO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"Dev Back-End\",\r\n    \"descricao\":\"Testando\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-formacao/curso/c3de620a-fa9d-4b41-9e85-41e06fbab36c/modulo/0fa7fd32-d050-45b6-8608-d9b2f888b5b1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-formacao",
+								"curso",
+								"c3de620a-fa9d-4b41-9e85-41e06fbab36c",
+								"modulo",
+								"0fa7fd32-d050-45b6-8608-d9b2f888b5b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LICOES",
+			"item": [
+				{
+					"name": "POST LICOES",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-formacao/curso/1f14f2dc-6bf4-42a3-a4bd-bf4671215d93/modulos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-formacao",
+								"curso",
+								"1f14f2dc-6bf4-42a3-a4bd-bf4671215d93",
+								"modulos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL LICOES",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET ON LICAO",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE LICOES",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"Teste\",\r\n    \"descricao\":\"modulo de teste\",\r\n    \"videoUrl\":\"900870979698\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-formacao/modulo/f05aed68-b805-4f2b-9339-c8d865c67482/licoes/1dd5c7be-17b7-467e-a3bc-434c1f817cd4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-formacao",
+								"modulo",
+								"f05aed68-b805-4f2b-9339-c8d865c67482",
+								"licoes",
+								"1dd5c7be-17b7-467e-a3bc-434c1f817cd4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USUARIO-CURSO",
+			"item": [
+				{
+					"name": "GET ALL CURSOS EM USUARIO",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "POST CURSO EM USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cursoId\":\"3a5f87aa-f642-4ade-bd29-2b7b1f145fe2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/usuario/24138b1b-0f81-4197-9f60-67129af418f4/curso/inscricao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"usuario",
+								"24138b1b-0f81-4197-9f60-67129af418f4",
+								"curso",
+								"inscricao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CURSO-USUARIO",
+			"item": [
+				{
+					"name": "GET ALL USUARIO EM CURSO",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "POST USUARIO EM CURSO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\": \"b54c4994-336f-41de-822f-73f87b6d48b2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/plataforma-ead-formacao/curso/9326a474-adb6-4e3f-90bb-44e1d98b1194/usuario/inscricao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"plataforma-ead-formacao",
+								"curso",
+								"9326a474-adb6-4e3f-90bb-44e1d98b1194",
+								"usuario",
+								"inscricao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INSTRUTOR",
+			"item": [
+				{
+					"name": "POST INSTRUTOR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\":\"e0b172cc-9dc6-46ce-a6a0-4f452f8e8042\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/instrutor/inscricao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"instrutor",
+								"inscricao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8087/plataforma-ead-usuario/autenticacao/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"plataforma-ead-usuario",
+								"autenticacao",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DOCUMENTACAO",
+			"item": [
+				{
+					"name": "DOCUMENTACAO",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
