@@ -1,67 +1,69 @@
-<h1 align="center" style="font-weight: bold;">Comunicação sincrona com Composition Patter e Rest-Client entre os microsserviços de usuario e curso. 💻</h1>
+<h1 align="center" style="font-weight: bold;">Comunicação Síncrona com Composition Pattern e Rest-Client entre os Microsserviços de Usuário e Curso. 💻</h1>
 
 <p align="center">
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#started">Introdução</a> • 
+  <a href="#tecnologias">Tecnologias</a> • 
+  <a href="#started">Introdução</a> • 
   <a href="#routes">API Endpoints</a> •
- <a href="#colab">Colaboradores</a> •
- <a href="#contribute">Contribuir</a>
+  <a href="#colab">Colaboradores</a> •
+  <a href="#contribute">Contribuir</a>
 </p>
 
 <p align="center">
-  <b>Este projeto foi desenvolvido utilizando o padrão de composição (Composition Pattern) para estruturar objetos complexos de forma flexível e reutilizável. A comunicação entre os microsserviços de Usuário e Curso é realizada de forma síncrona através de Rest Client, permitindo o gerenciamento de matrículas de usuários em cursos de maneira eficiente e organizada.</p>
+  <b>Este projeto foi desenvolvido utilizando o padrão de composição (Composition Pattern) para estruturar objetos complexos de forma flexível e reutilizável. A comunicação entre os microsserviços de Usuário e Curso é realizada de forma síncrona através de Rest Client, permitindo o gerenciamento de matrículas de usuários em cursos de maneira eficiente e organizada.</b>
+</p>
 
 <h3>🔍 O que é o Composition Pattern?</h3>
 <p>O Composition Pattern (Padrão de Composição) é um padrão estrutural que permite compor objetos mais complexos a partir de objetos mais simples. Ele é uma alternativa ao padrão Inheritance (herança) para evitar problemas comuns como a rigidez de hierarquias e o alto acoplamento. No Composition Pattern, objetos podem ser compostos dinamicamente, mantendo um baixo nível de acoplamento e aumentando a flexibilidade da aplicação.</p>
-</b>
-<h3>🔍 O que é Comunicação Síncrona com Rest Client?</h3>
-Comunicação síncrona significa que a aplicação que está fazendo a requisição espera pela resposta antes de continuar a execução. Em um sistema distribuído, isso é comum quando você precisa integrar com APIs externas de forma imediata, como em uma consulta de dados em tempo real.
 
+<h3>🔍 O que é Comunicação Síncrona com Rest Client?</h3>
+<p>Comunicação síncrona significa que a aplicação que está fazendo a requisição espera pela resposta antes de continuar a execução. Em um sistema distribuído, isso é comum quando você precisa integrar com APIs externas de forma imediata, como em uma consulta de dados em tempo real.</p>
 
 <h2 id="tecnologias">💻 Tecnologias usadas</h2>
 
-- lista de todas tecnologias usadas:
-- Java 21
-- IDE: IntelliJ
-- Maven
-- Configuração com arquivo yaml
-- Spring Boot 3.3.5
-- Spring MVC
-- Arquitetura REST
-- Composition Pattern
-- Comunicação Síncrona com Rest Client
-- Spring Security
-- Token JWT com uso de ROLEs e criptografia de senhas na base de dados
-- Spring Data JPA
-- Hibernate
-- ORM
-- Uso de DTOs e visualização por campos com anotação @JsonView
-- PostgreSQL
-- Validations
-- Specifications
-- Filtros avançados e dinâmicos
-- Tratamento global de exceções com ExceptionHandler
-- Log4j2
-- Lombok
-- Swagger
-- Configuração de CORS
-- Configuração padrão de data (ISO 8601 UTC)
-- Configuração de Paginação e serialização
+<ul>
+  <li>Java 21</li>
+  <li>IDE: IntelliJ</li>
+  <li>Maven</li>
+  <li>Configuração com arquivo YAML</li>
+  <li>Spring Boot 3.3.5</li>
+  <li>Spring MVC</li>
+  <li>Arquitetura REST</li>
+  <li>Composition Pattern</li>
+  <li>Comunicação Síncrona com Rest Client</li>
+  <li>Spring Security</li>
+  <li>Token JWT com uso de ROLEs e criptografia de senhas na base de dados</li>
+  <li>Spring Data JPA</li>
+  <li>Hibernate</li>
+  <li>ORM</li>
+  <li>Uso de DTOs e visualização por campos com anotação @JsonView</li>
+  <li>PostgreSQL</li>
+  <li>Validações</li>
+  <li>Specifications</li>
+  <li>Filtros avançados e dinâmicos</li>
+  <li>Tratamento global de exceções com ExceptionHandler</li>
+  <li>Log4j2</li>
+  <li>Lombok</li>
+  <li>Swagger</li>
+  <li>Configuração de CORS</li>
+  <li>Configuração padrão de data (ISO 8601 UTC)</li>
+  <li>Configuração de Paginação e serialização</li>
+</ul>
+
 <h2 id="started">🚀 Primeiros passos</h2>
 
-como executar o projeto localmente
-<h3>Pré-requisitos</h3>
+<h3>Como executar o projeto localmente?</h3>
 
-1- Recomendamos
-- Java 21+
-  
-- Maven 3.3.5
-  
-- PostgreSQL
+<h4>Pré-requisitos</h4>
+<ul>
+  <li>Java 21+</li>
+  <li>Maven 3.3.5</li>
+  <li>PostgreSQL</li>
+</ul>
 
-2- Configure seu banco de dados no application.yml:
+<h4>Passos para rodar o projeto</h4>
+<p>1- Configure seu banco de dados no <code>application.yml</code>:</p>
 
-```ymal
+```yaml
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/seu_banco
@@ -477,18 +479,24 @@ LIÇÃO DELETADO COM SUCESSO!
 ```
 <h2 id="colab">🤝 Colaborador</h2>
 
-Special thank you for all people that contributed for this project.
+<h3 align="center">👋 Olá! Eu sou o José Carlos</h3>
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/josecarlos09">
-        <img src="https://avatars.githubusercontent.com/u/112886115?v=4" width="100px" alt="José Carlos Profile Picture" style="border-radius:50%"/><br>
-        <sub><b>José Carlos</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/josecarlos09">
+    <img src="https://github.com/josecarlos09.png" width="120" alt="José Carlos"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/josecarlos09">
+    <b>GitHub: @josecarlos09</b>
+  </a>
+</p>
+
+<p align="center">
+  💻 Desenvolvedor Back-end | 🚀 Apaixonado por Java, Spring Boot, APIs RESTful e Microserviços
+</p>
+
 
 
 <h2 id="contribute">📫 Contribua para esté projeto</h2>
@@ -497,13 +505,13 @@ Gostaria de convidá-lo a fazer parte deste projeto e ajudar a torná-lo ainda m
 
 <h2>Como você pode ajudar?</h2>
 
-**Corrigir bugs:** Se você encontrou algum erro ou comportamento inesperado, ajude a corrigir.
+- **Corrigir bugs:** Se você encontrou algum erro ou comportamento inesperado, ajude a corrigir.
 
-**Adicionar novas funcionalidades:** Tem alguma ideia para uma nova funcionalidade ou melhoria? Abra um Pull Request!
+- **Adicionar novas funcionalidades:** Tem alguma ideia para uma nova funcionalidade ou melhoria? Abra um Pull Request!
 
-**Melhorar a documentação:** Se encontrar algo confuso ou que precisa de mais explicações, sinta-se à vontade para sugerir mudanças.
+- **Melhorar a documentação:** Se encontrar algo confuso ou que precisa de mais explicações, sinta-se à vontade para sugerir mudanças.
 
-**Revisar código:** Ajudar na revisão de código de outros desenvolvedores é sempre muito bem-vindo!
+- **Revisar código:** Ajudar na revisão de código de outros desenvolvedores é sempre muito bem-vindo!
 
 <h3>📝 Boas práticas para contribuir </h3>
 
